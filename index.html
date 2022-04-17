@@ -1,47 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-            shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
+    <link rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
   </head>
 
   <body>
+    <!-- bài đăng nhập
+    đầu vào
+        cho người dùng nhập username , password
+    xử lý
+        gán giá trị cho biến userName , passWord
+    đầu ra
+        xuất ra giá trị của biến userName , passWord
+    -->
     <div class="card col-md-6">
       <div class="card-header">Đăng Nhập</div>
       <div class="card-body">
         <div class="col-4">
           UserName
-          <input
-            type="text"
-            class="form-control"
-            id="txtUserName"
-            placeholder="Enter UserName"
-            name="email"
-          />
+          <input type="text" class="form-control" id="txtUserName"
+            placeholder="Enter UserName" name="email" value="" />
         </div>
         <div class="col-4">
           PassWord
-          <input
-            type="password"
-            class="form-control"
-            id="txtPassWord"
-            placeholder="Enter PassWord"
-            name="pswd"
-          />
+          <input type="password" class="form-control" id="txtPassWord"
+            placeholder="Enter PassWord" name="pswd" value="" />
         </div>
       </div>
       <button id="btnLogin" type="submit" class="btn btn-primary mt-3 col-4">
@@ -50,18 +44,27 @@
       <div class="card-footer text-muted">
         Thông báo kết quả
         <div class="Result">
+          <div id="ResultLogin"></div>
           <div id="resultUserName"></div>
           <div id="resultPassWord"></div>
         </div>
       </div>
     </div>
-    <!-- bài 1 -->
-    <div class="card col-md-6">
+    <!-- bài 1
+    Đầu vào:
+         nhập vào số ngày làm:ngayLam
+        const Luong1Ngay = 100000
+    Xử lý
+         LuongThang = ngayLam*Luong1Ngay
+    b3 
+        LuongThang -->
+    <div class="card col-md-6 mt-4">
       <div class="card-header">
         Bài 1
         <div class="row">
           <div class="col-2">
-            <input id="enterNumb" type="text" placeholder="Nhập số ngày làm" />
+            <input id="enterDay" type="text" placeholder="Nhập số ngày làm"
+              value="" />
           </div>
         </div>
         <p>Lương 1 ngày : 100.000</p>
@@ -76,41 +79,135 @@
         <div id="Result"></div>
       </div>
     </div>
-    <!-- bài 2 -->
-    <div class="card col-md-6">
-        <div class="card-header">
-            Bài 2
+    <!-- bài 2
+    Đầu vào 
+        nhập vào 5 số thực numb_1 numb_2 numb_3 numb_4 numb_5
+    Xử lý
+        TBC = (numb_1 + numb_2 + numb_3 + numb_4 + numb_5)/5
+    Đầu ra
+        TBC
+    -->
+    <div class="card col-md-6 mt-4">
+      <div class="card-header">
+        Bài 2
+        <div class="col-md-4">
+          <input id="num_1" type="text" placeholder="Nhập số thực thứ nhất"
+            value="">
+          <input id="num_2" type="text" placeholder="Nhập số thực thứ hai"
+            value="">
+          <input id="num_3" type="text" placeholder="Nhập số thực thứ ba"
+            value="">
+          <input id="num_4" type="text" placeholder="Nhập số thực thứ tư"
+            value="">
+          <input id="num_5" type="text" placeholder="Nhập số thực thứ năm"
+            value="">
         </div>
-        <div class="card-body">
-            <input id="num_1" type="text" placeholder="Nhập số thực thứ nhất">
-            <input id="num_2" type="text" placeholder="Nhập số thực thứ hai">
-            <input id="num_3" type="text" placeholder="Nhập số thực thứ ba">
-            <input id="num_4" type="text" placeholder="Nhập số thực thứ bốn">
-            <input id="num_5" type="text" placeholder="Nhập số thực thứ năm">
-            <div><button id="enterNumb" class="btn btn-primary mt-3" type="submit">Enter</button></div>
+        <button id="enterNumb" class="btn btn-primary mt-3" type="submit">Enter</button>
+      </div>
+      <div class="card-body">
+        TBC = (numb_1 + numb_2 + numb_3 + numb_4 + numb_5)/5
+      </div>
+      <div class="card-footer text-muted">
+        Kết quả
+        <div id="resultNumb"></div>
+      </div>
+    </div>
+    <!-- bài 3
+    đầu vào
+        nhập số tiền USD tienUSD
+        const VND = 23.500
+    xử lý
+        tienUSD * VND
+    đầu ra
+        số tiền sau quy đổi -->
+    <div class="card col-md-6 mt-4">
+      <div class="card-header">
+        Bài 3
+        <div class="col-md-4 mt-2">
+          <input id="money" type="text" placeholder="Nhập số tiền USD" value="">USD
         </div>
-        <div class="card-footer text-muted">
-            Kết quả
-            <div id="resultNumb"></div>
+        <button id="enterMoney" type="submit" class="btn btn-primary mt-3">Enter</button>
+      </div>
+      <div class="card-body">
+        tienUSD * VND
+      </div>
+      <div class="card-footer text-muted">
+        Số tiền quy đổi
+        <div id="resultMoney"></div>
+      </div>
+    </div>
+    <!-- bài 4
+    đầu vào
+        nhập vào chiều dài: CD
+        nhập vào chiều rộng: CR
+    xử lý
+        diện tích HCN: CD*CR
+        chu vi HCN: (CD+CR)*2
+    đầu ra
+        diện tích
+        chu vi -->
+    <div class="card col-md-6 mt-4">
+      <div class="card-header">
+        Bài 4
+        <div class="col-md-4 mt-2">
+          <input id="nhapCD" type="text" placeholder="Nhập chiều dài HCN"
+            value="">
+          <input id="nhapCR" type="text" placeholder="Nhập chiều rộng HCN"
+            value="">
         </div>
+        <button id="enterSquare" type="submit" class="btn btn-primary mt-3">Enter></button>
+      </div>
+      <div class="card-body">
+        cho nhập chiều dài CD ,chiều rộng CR HCN
+        diện tích HCN: CD*CR
+        chu vi HCN: (CD+CR)*2
+      </div>
+      <div class="card-footer text-muted">
+        Kết quả tính
+        <div id="resultCV"></div>
+        <div id="resultDT"></div>
+      </div>
+    </div>
+    <!-- bài 5
+    đầu vào
+        nhập vào con số number
+    xử lý
+        lấy số hàng đơn vị donvi = number%10
+        lấy số hàng chục chuc = number/10
+        donvi + chuc
+    đầu ra
+        tổng 2 ký số -->
+    <div class="card col-md-6 mt-4">
+      <div class="card-header">
+        Bài 5
+        <div class="col-md-4 mt-2">
+          <input id="Number" type="text" placeholder="Nhập 1 số" value="">
+        </div>
+        <button id="enterNumber" type="submit" class="btn btn-primary mt-3">Enter></button>
+      </div>
+      <div class="card-body">
+        lấy số hàng đơn vị donvi = number%10<br>
+        lấy số hàng chục chuc = number/10<br>
+        sum=donvi + chuc
+      </div>
+      <div class="card-footer text-muted">
+        Tổng 2 ký số
+        <div id="resultNumer"></div>
+      </div>
     </div>
     <script src="./main.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>
